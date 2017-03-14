@@ -29,7 +29,7 @@ RUN apt-get install -y gcc make g++ build-essential libc6-dev tcl git supervisor
 RUN apt-get install -y rubygems
 
 # Install ruby dependencies so we can bootstrap the cluster via redis-trib.rb
-RUN gem install redis
+RUN gem install redis -v 3.3.3
 
 # checkout the 3.0.6 tag (Will change to 3.2 tag when it is released as stable)
 RUN git clone -b 3.0.6 https://github.com/antirez/redis.git
